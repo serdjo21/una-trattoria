@@ -15,6 +15,9 @@ const INFO = {
   hours: "08:00–23:00 (svaki dan)",
 };
 
+export const dynamic = "force-dynamic";
+
+
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="font-[var(--font-serif)] text-3xl sm:text-4xl tracking-tight">
@@ -326,5 +329,7 @@ export default function Page() {
 
 
     </main>
+
   );
+  
 }
