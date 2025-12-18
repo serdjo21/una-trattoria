@@ -271,14 +271,55 @@ export default function Page() {
 
       <Divider />
 
-      {/* REZERVACIJE */}
-      <SplitSection
-        title="Rezervacije"
-        text="Pozajmićemo vam sto, a zauzvrat nudimo iskustvo koje miriše na Italiju. Najbrže je poziv ili poruka — mi potvrđujemo i to je to."
-        cta="Rezervacije"
-        href={`tel:${INFO.phone.replace(/\s+/g, "")}`}
-        imageSrc="/images/tiramisu.jpg"
-      />
+      <section className="relative bg-black/80 border-y border-white/10 overflow-hidden">
+  {/* gold radial */}
+  <div className="absolute inset-0 [background:radial-gradient(50%_40%_at_50%_40%,rgba(210,170,95,0.18),transparent_65%)]" />
+
+  {/* content */}
+  <div className="relative mx-auto max-w-6xl px-5 py-28 text-center">
+    <div className="text-xs tracking-[0.35em] uppercase text-[#d6b36a]/80">
+      Dostava
+    </div>
+
+    <h2 className="mt-4 font-[var(--font-serif)] text-4xl sm:text-5xl tracking-tight">
+      Poruči <span className="text-[#d6b36a]">Una</span> kući
+    </h2>
+
+    <p className="mx-auto mt-6 max-w-2xl text-white/70 leading-relaxed">
+      Isti sastojci, ista disciplina.
+      Ako ne dolaziš ti kod nas — dolazimo mi kod tebe.
+    </p>
+
+    {/* ICON LINKS */}
+    <div className="mt-12 flex justify-center gap-10">
+      {/* WOLT */}
+      <a
+        href="https://wolt.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative flex h-32 w-32 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur transition hover:border-[#d6b36a]/60"
+      >
+        <span className="absolute inset-0 rounded-full border border-[#d6b36a]/40 opacity-0 group-hover:opacity-100 transition" />
+        <span className="text-lg tracking-wide group-hover:text-[#d6b36a] transition">
+          Wolt
+        </span>
+      </a>
+
+      {/* GLOVO */}
+      <a
+        href="https://glovoapp.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative flex h-32 w-32 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur transition hover:border-[#d6b36a]/60"
+      >
+        <span className="absolute inset-0 rounded-full border border-[#d6b36a]/40 opacity-0 group-hover:opacity-100 transition" />
+        <span className="text-lg tracking-wide group-hover:text-[#d6b36a] transition">
+          Glovo
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* GALERIJA */}
       <Gallery />
