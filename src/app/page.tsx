@@ -15,7 +15,6 @@ const INFO = {
   hours: "08:00–23:00 (svaki dan)",
 };
 
-export const dynamic = "force-dynamic";
 
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
