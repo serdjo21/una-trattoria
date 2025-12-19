@@ -8,6 +8,9 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif"
 export const metadata = {
   title: "Una Trattoria — Pizza u Beogradu",
   description: "Ultraluksuzna napoletana pizza i trattoria doživljaj u srcu Beograda.",
+  icons: {
+    icon: "/favicon.svg",
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

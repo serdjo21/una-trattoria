@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #91670d;
+        font-size: 16px;
+      }
+
+      .st0, .st1 {
+        font-family: BodoniSvtyTwoSCITCTT-Book, 'Bodoni 72 Smallcaps';
+      }
+
+      .st1 {
+        fill: #f1f2f2;
+        font-size: 12px;
+      }
+
+      .st2 {
+        stroke: #91670d;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <circle class="st2" cx="50" cy="50" r="49.5"/>
+  <text class="st0" transform="translate(21.6 47.5)"><tspan x="0" y="0">Una</tspan></text>
+  <text class="st1" transform="translate(42.6 59.6)"><tspan x="0" y="0">Trattoria</tspan></text>
+</svg>
