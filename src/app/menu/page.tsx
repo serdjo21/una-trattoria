@@ -16,7 +16,7 @@ const INFO = {
   tagline: "Napoletana • Beograd",
   phone: "+381 69 2134 843",
   address: "Njegoševa 8, Vračar, Beograd",
-  hours: "08:00–23:00 (svaki dan)",
+  hours: "08:00–23:00 svakog dana",
 };
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -116,8 +116,7 @@ export default function MenuPage() {
     </h1>
 
     <p className="mx-auto mt-6 max-w-2xl text-white/70 leading-relaxed">
-      Cijene su realne, sastojci su ozbiljni.
-      Ako tražiš količinu — ima drugih mjesta.
+      Zavirite u Naš meni
     </p>
 
     {/* INFO STRIP */}
@@ -138,7 +137,7 @@ export default function MenuPage() {
         </div>
         <div>
           <div className="uppercase tracking-[0.25em] text-white/50">
-            Radno vrijeme
+            Radno vreme
           </div>
           <div className="mt-1">08:00–23:00</div>
         </div>
@@ -151,7 +150,7 @@ export default function MenuPage() {
       <section className="relative border-y border-white/10 bg-black/80">
         <div className="pointer-events-none absolute top-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d6b36a]/50 to-transparent" />
         <div className="mx-auto max-w-6xl px-5 py-24">
-          <MenuGrid title="Antipasti" items={antipasti} />
+          <MenuGrid title="SEKCIJA" items={antipasti} />
         </div>
         <div className="pointer-events-none absolute bottom-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d6b36a]/35 to-transparent" />
       </section>
@@ -182,9 +181,8 @@ export default function MenuPage() {
             Alergeni i izmjene po dogovoru.
           </div>
           <div className="mt-4 text-sm text-white/70 leading-relaxed">
-            Ne radimo cirkus od hrane — radimo precizno. Ako imaš alergije ili želiš malu izmjenu,
-            samo reci prije narudžbe.
-          </div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit dolores accusamus iusto nulla quasi, debitis corporis at perspiciatis. Quaerat temporibus culpa modi asperiores beatae odit corrupti nostrum eius. Neque, commodi!
+          </div> 
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <a

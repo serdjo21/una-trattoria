@@ -9,10 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const INFO = {
   name: "Una Trattoria",
-  tagline: "Napoletana • Beograd",
+  tagline: "Vračar • Beograd",
   phone: "+381 69 2134 843",
   address: "Njegoševa 8, Vračar, Beograd",
-  hours: "08:00–23:00 (svaki dan)",
+  hours: "08:00–23:00 svakog dana",
 };
 
 
@@ -206,8 +206,7 @@ export default function Page() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-white/70 leading-relaxed">
-            Fermentacija tijesta, visoka temperatura i sastojci koji ne glume.
-            Luksuz nije kič — luksuz je preciznost.
+            Una Trattoria donosi autentičnu italijansku kuhinju u Beograd.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
@@ -242,7 +241,7 @@ export default function Page() {
               </div>
               <div>
                 <div className="uppercase tracking-[0.25em] text-white/50">
-                  Radno vrijeme
+                  Radno vreme
                 </div>
                 <div className="mt-1">{INFO.hours}</div>
               </div>
@@ -254,7 +253,8 @@ export default function Page() {
       {/* O NAMA */}
       <SplitSection
         title="O nama"
-        text="Una Trattoria je mjesto đe se ukus gradi disciplinom: tijesto fermentira, peć radi na visokoj temperaturi, a sastojci su sezonski i čisti. Ne jurimo “najviše svega” — jurimo balans."
+        text="Una Trattoria nastala je iz ljubavi prema italijanskoj kuhinji i jednostavnim, dobro poznatim receptima.
+              Pravimo napuljsku pizzu od dugo fermentisanog testa, pečenu na visokoj temperaturi, uz pažljivo birane sastojke."
         imageSrc="/images/caprese.jpg"
       />
 
@@ -263,7 +263,8 @@ export default function Page() {
       {/* O JELOVNIKU */}
       <SplitSection
         title="O jelovniku"
-        text="Signature pizze, antipasti i slatko za kraj — sve složeno tako da jedno vodi u drugo. Ako si došao po jedan zalogaj, otići ćeš sa pričom."
+        text="Jelovnik Una Trattorie nudi raznovrstan izbor jela.
+              U ponudi su napuljske pizze, paste i sendviči, uz kombinacije koje se lako biraju i pamte."
         cta="Pogledajte meni"
         href="/menu"
         imageSrc="/images/pizza.jpg"
@@ -284,19 +285,18 @@ export default function Page() {
     </div>
 
     <h2 className="mt-4 font-[var(--font-serif)] text-4xl sm:text-5xl tracking-tight">
-      Poruči <span className="text-[#d6b36a]">Una</span> kući
+      Partneri <span className="text-[#d6b36a]">Dostave</span>
     </h2>
 
     <p className="mx-auto mt-6 max-w-2xl text-white/70 leading-relaxed">
-      Isti sastojci, ista disciplina.
-      Ako ne dolaziš ti kod nas — dolazimo mi kod tebe.
+      Naručite Naše specijalitete ovde.
     </p>
 
     {/* ICON LINKS */}
     <div className="mt-12 flex justify-center gap-10">
       {/* WOLT */}
       <a
-        href="https://wolt.com/"
+        href="https://wolt.com/sr/srb/belgrade/restaurant/campania-pizza-gourmet-vracar?srsltid=AfmBOoqIPRMbG4gW9mfaC-a9fdPa7q5ou70I9J0ZYNHfvi1_wQG_CBMk"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex h-32 w-32 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur transition hover:border-[#d6b36a]/60"
@@ -309,7 +309,7 @@ export default function Page() {
 
       {/* GLOVO */}
       <a
-        href="https://glovoapp.com/"
+        href="https://glovoapp.com/sr/rs/belgrade/stores/campania-pizza-gourmet-beg"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex h-32 w-32 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur transition hover:border-[#d6b36a]/60"
