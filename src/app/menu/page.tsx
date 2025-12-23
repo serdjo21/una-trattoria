@@ -14,9 +14,9 @@ gsap.registerPlugin(ScrollTrigger);
 const INFO = {
   name: "Una Trattoria",
   tagline: "Napoletana • Beograd",
-  phone: "+381 69 2134 843",
+  phone: "+381 63 336 444",
   address: "Njegoševa 8, Vračar, Beograd",
-  hours: "08:00–23:00 svakog dana",
+  hours: "11:00 – 00:00 svakog dana",
 };
 
 function SectionTitle({ children }: { children: React.ReactNode }) {

@@ -7,8 +7,8 @@ export default function CTA() {
           Najbolje iskustvo je svježe iz peći i za stolom. Pozovi ili piši na WhatsApp.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <a className="rounded-full px-6 py-3 text-sm border border-[rgba(210,170,95,.45)] bg-[rgba(210,170,95,.18)] hover:bg-[rgba(210,170,95,.26)] transition" href="tel:+38160000000">
-            +381 60 000 000
+          <a className="rounded-full px-6 py-3 text-sm border border-[rgba(210,170,95,.45)] bg-[rgba(210,170,95,.18)] hover:bg-[rgba(210,170,95,.26)] transition" href="tel:+38163336444">
+            +381 63 336 444
           </a>
           <a className="rounded-full px-6 py-3 text-sm border border-white/15 hover:border-white/35 transition" href="#kontakt">
             Lokacija & kontakt

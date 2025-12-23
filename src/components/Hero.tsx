@@ -29,7 +29,7 @@ export default function Hero() {
 
         <h1 className="u-reveal mt-4 font-[var(--font-serif)] text-5xl md:text-7xl leading-[0.95]">
           <span className="u-shine inline-block bg-[linear-gradient(90deg,rgba(210,170,95,.2),rgba(210,170,95,.95),rgba(210,170,95,.2))] bg-[length:200%_100%] bg-clip-text text-transparent">
-            Una Trattoria
+            Pizza una trattoria
           </span>
           <br />
           pizza koja izgleda i ukusom udara.
