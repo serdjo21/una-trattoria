@@ -5,7 +5,16 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import type { Metadata } from "next";
 gsap.registerPlugin(ScrollTrigger);
+
+export const metadata = {
+  title: "Pizza Una Trattoria",
+  description:
+    "Italijanske pice i specijaliteti u srcu Beograda. Originalna napoletana pizza, sveže paste i autentični ukusi Italije na Vračaru.",
+  alternates: { canonical: "/" },
+  openGraph: { url: "https://unatrattoria.rs/" },
+};
 
 const INFO = {
   name: "Una Trattoria",
@@ -15,7 +24,22 @@ const INFO = {
   hours: "11:00–00:00 svakog dana",
 };
 
-
+const schemaObj = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  name: "Una Trattoria",
+  url: "https://unatrattoria.rs",
+  telephone: "+38163336444",
+  priceRange: "$$",
+  servesCuisine: "Italian",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Njegoševa 8",
+    addressLocality: "Beograd",
+    postalCode: "11000",
+    addressCountry: "RS",
+  },
+};
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
@@ -28,10 +52,6 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 function Divider() {
   return <div className="h-px w-full bg-white/10" />;
 }
-
-
-
-
 
 function Gallery() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -322,13 +342,10 @@ export default function Page() {
     </div>
   </div>
 </section>
-
       {/* GALERIJA */}
       <Gallery />
-
-
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObj) }} />
     </main>
-
+    
   );
-  
 }

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,6 +18,14 @@ const INFO = {
   phone: "+381 63 336 444",
   address: "Njegoševa 8, Vračar, Beograd",
   hours: "11:00 – 00:00 svakog dana",
+};
+
+export const metadata = {
+  title: "Meni",
+  description:
+    "Pizza Una Trattoria meni. pogledajte našu selekciju napoletana pica, svežih pasti i italijanskih specijaliteta.",
+  alternates: { canonical: "/menu" },
+  openGraph: { url: "https://unatrattoria.rs/menu" },
 };
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -91,7 +100,7 @@ export default function MenuPage() {
   {/* BACKGROUND IMAGE */}
   <div className="absolute inset-0">
     <Image
-      src="/images/oven.jpg" // može i ista hero slika kao na home
+      src="/images/oven.jpg" 
       alt="Una Trattoria — Meni"
       fill
       priority
@@ -100,7 +109,7 @@ export default function MenuPage() {
     />
   </div>
 
-  {/* OVERLAYS – ISTO KAO NA HOME */}
+  {/* OVERLAYS */}
   <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/85" />
   <div className="absolute inset-0 [background:radial-gradient(60%_40%_at_50%_40%,rgba(210,170,95,0.20),transparent_60%)]" />
   <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:64px_64px]" />
@@ -146,7 +155,6 @@ export default function MenuPage() {
   </div>
 </section>
 
-      {/* ANTIPASTI (dark blok kao galerija) */}
       <section className="relative border-y border-white/10 bg-black/80">
         <div className="pointer-events-none absolute top-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d6b36a]/50 to-transparent" />
         <div className="mx-auto max-w-6xl px-5 py-24">
@@ -159,7 +167,7 @@ export default function MenuPage() {
         <GoldDivider tight />
       </div>
 
-      {/* PIZZA (dark blok kao galerija) */}
+      {/* PIZZA */}
       <section className="relative border-y border-white/10 bg-black/80">
         <div className="pointer-events-none absolute top-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d6b36a]/50 to-transparent" />
         <div className="mx-auto max-w-6xl px-5 py-24">
