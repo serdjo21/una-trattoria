@@ -1,6 +1,4 @@
-"use client";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import gsap from "gsap";
@@ -49,49 +47,7 @@ function GoldDivider({ tight }: { tight?: boolean }) {
 }
 
 export default function MenuPage() {
-  const topRef = useRef<HTMLDivElement>(null);
-  const noteRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!topRef.current) return;
-
-    const el = topRef.current;
-
-    const tl = gsap.timeline();
-    tl.fromTo(
-      el.querySelectorAll(".m-kicker, .m-title, .m-sub, .m-actions"),
-      { opacity: 0, y: 18, filter: "blur(6px)" },
-      {
-        opacity: 1,
-        y: 0,
-        filter: "blur(0px)",
-        duration: 0.9,
-        ease: "power3.out",
-        stagger: 0.12,
-      }
-    );
-
-    if (noteRef.current) {
-      gsap.fromTo(
-        noteRef.current,
-        { opacity: 0, y: 24 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.9,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: noteRef.current,
-            start: "top 85%",
-          },
-        }
-      );
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
-  }, []);
 
   return (
     <main className="bg-[rgb(var(--bg))] text-[rgb(var(--fg))]">
@@ -179,8 +135,6 @@ export default function MenuPage() {
       {/* NOTE / CTA */}
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div
-          ref={noteRef}
-          className="rounded-3xl border border-[#d6b36a]/25 bg-[#d6b36a]/5 p-8 sm:p-10"
         >
           <div className="text-xs tracking-[0.35em] uppercase text-[#d6b36a]/80">
             Napomena

@@ -1,11 +1,10 @@
-'use client';
 import SplitSection from "@/components/SplitSection";
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Metadata } from "next";
+import HomeClient from "./HomeClient";
 gsap.registerPlugin(ScrollTrigger);
 
 export const metadata = {
@@ -15,6 +14,9 @@ export const metadata = {
   alternates: { canonical: "/" },
   openGraph: { url: "https://unatrattoria.rs/" },
 };
+
+
+
 
 const INFO = {
   name: "Una Trattoria",
@@ -54,27 +56,7 @@ function Divider() {
 }
 
 function Gallery() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!sectionRef.current) return;
-
-    gsap.fromTo(
-      sectionRef.current.querySelectorAll(".gallery-item"),
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.12,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-        },
-      }
-    );
-  }, []);
+  
 
   const imgs = [
     "/images/pizza.jpg",
@@ -86,8 +68,8 @@ function Gallery() {
   ];
 
   return (
+    
     <section
-      ref={sectionRef}
       className="relative border-y border-white/10 bg-black/80"
     >
       {/* ZLATNA ŠTRAFTA TOP */}

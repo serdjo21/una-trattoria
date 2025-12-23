@@ -1,6 +1,3 @@
-'use client';
-
-import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -98,37 +95,9 @@ function InfoCard({
 }
 
 export default function ContactPage() {
-  const howRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const blocks = [
-      { ref: howRef, sel: ".reveal-how" },
-      { ref: contactRef, sel: ".reveal-contact" },
-      { ref: mapRef, sel: ".reveal-map" },
-    ];
 
-    blocks.forEach(({ ref, sel }) => {
-      if (!ref.current) return;
-      const els = ref.current.querySelectorAll(sel);
-      gsap.fromTo(
-        els,
-        { opacity: 0, y: 26 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.9,
-          ease: "power3.out",
-          stagger: 0.12,
-          scrollTrigger: {
-            trigger: ref.current,
-            start: "top 82%",
-          },
-        }
-      );
-    });
-  }, []);
+  
 
   const telHref = `tel:${INFO.phone.replace(/\s+/g, "")}`;
 
@@ -218,7 +187,7 @@ export default function ContactPage() {
       </section>
 
       {/* KONTAKT */}
-      <section ref={contactRef} className="relative bg-black/85 border-b border-white/10 overflow-hidden">
+      <section className="relative bg-black/85 border-b border-white/10 overflow-hidden">
         <div className="mx-auto max-w-6xl px-5 py-20">
           <div className="reveal-contact flex items-end justify-between gap-6">
             <SectionTitle>
@@ -262,7 +231,7 @@ export default function ContactPage() {
       </section>
 
       {/* MAPA */}
-      <section ref={mapRef} className="relative bg-black/80 border-b border-white/10 overflow-hidden">
+      <section  className="relative bg-black/80 border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0 [background:radial-gradient(55%_45%_at_50%_20%,rgba(210,170,95,0.14),transparent_70%)]" />
         <div className="mx-auto max-w-6xl px-5 py-20 relative">
           <div className="reveal-map flex items-end justify-between gap-6">
