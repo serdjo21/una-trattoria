@@ -18,7 +18,7 @@ const INFO = {
   tagline: "Vračar • Beograd",
   phone: "+381 63 336 444",
   address: "Njegoševa 8, Vračar, Beograd",
-  hours: "11:00–00:00 svakog dana",
+  hours: "11:00–23:00 svakog dana",
   email: "kontakt@unatrattoria.rs",
 };
 

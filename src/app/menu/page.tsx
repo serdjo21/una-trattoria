@@ -15,7 +15,7 @@ const INFO = {
   tagline: "Napoletana • Beograd",
   phone: "+381 63 336 444",
   address: "Njegoševa 8, Vračar, Beograd",
-  hours: "11:00 – 00:00 svakog dana",
+  hours: "11:00 – 23:00 svakog dana",
 };
 
 export const metadata = {
@@ -104,7 +104,7 @@ export default function MenuPage() {
           <div className="uppercase tracking-[0.25em] text-white/50">
             Radno vreme
           </div>
-          <div className="mt-1">08:00–23:00</div>
+          <div className="mt-1">11:00–23:00</div>
         </div>
       </div>
     </div>
