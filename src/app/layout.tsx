@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://unatrattoria.rs"),
   title: {
@@ -16,21 +17,45 @@ export const metadata: Metadata = {
   },
   description:
     "Italijanske pice i specijaliteti u srcu Beograda. Originalna napoletana pizza, sveže paste i autentični ukusi Italije na Vračaru.",
-  alternates: {
-    canonical: "/",
-  },
+
+  alternates: { canonical: "/" },
+
   openGraph: {
     type: "website",
     url: "https://unatrattoria.rs",
     siteName: "Una Trattoria",
+    title: "Pizza Una Trattoria",
+    description:
+      "Italijanske pice i specijaliteti u srcu Beograda. Originalna napoletana pizza, sveže paste i autentični ukusi Italije na Vračaru.",
     images: [
-      { url: "/og.jpg", width: 1200, height: 630, alt: "Una Trattoria" },
+      {
+        url: new URL("/og.jpg", "https://unatrattoria.rs").toString(),
+        width: 1200,
+        height: 630,
+        alt: "Una Trattoria",
+      },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    images: ["/og.jpg"],
+    title: "Pizza Una Trattoria",
+    description:
+      "Italijanske pice i specijaliteti u srcu Beograda. Originalna napoletana pizza, sveže paste i autentični ukusi Italije na Vračaru.",
+    images: [new URL("/og.jpg", "https://unatrattoria.rs").toString()],
   },
+
+  appleWebApp: {
+    capable: true,
+    title: "Una Trattoria",
+    statusBarStyle: "black-translucent",
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+
   robots: {
     index: true,
     follow: true,
