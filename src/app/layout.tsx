@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter, Playfair_Display } from "next/font/google";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
@@ -72,6 +73,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="sr-Latn" className={`${inter.variable} ${playfair.variable}`}>
+       <Head>
+        <title>Una Trattoria</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta property="og:image" content="/og.jpg" />
+        <meta property="og:title" content="Una Trattoria" />
+      </Head>
       <body className="min-h-screen">
         <Navbar />
         {children}

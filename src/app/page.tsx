@@ -43,6 +43,8 @@ const schemaObj = {
   },
 };
 
+
+
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="font-[var(--font-serif)] text-3xl sm:text-4xl tracking-tight">
@@ -68,6 +70,8 @@ function Gallery() {
   ];
 
   return (
+
+    
     
     <section
       className="relative border-y border-white/10 bg-black/80"
