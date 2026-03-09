@@ -2,7 +2,7 @@ export const texts = {
   sr: {
     meni: "Meni",
     kontakt: "Kontakt",
-    pozovi: "Pozovi",
+    pozovi:"Pozovi",
     rezervacije: "Rezerviši stol",
     opis: "Najbolje iskustvo je svježe iz peći i za stolom. Pozovi ili piši na WhatsApp.",
     lokacija: "Lokacija & kontakt",

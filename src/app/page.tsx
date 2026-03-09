@@ -302,7 +302,7 @@ export default function Page() {
     <div className="mt-12 flex justify-center gap-10">
       {/* WOLT */}
       <a
-        href="https://wolt.com/sr/srb/belgrade/restaurant/campania-pizza-gourmet-vracar?srsltid=AfmBOoqIPRMbG4gW9mfaC-a9fdPa7q5ou70I9J0ZYNHfvi1_wQG_CBMk"
+        href="https://wolt.com/sr/srb/belgrade/restaurant/una-trattoria-bg?srsltid=AfmBOordDjQVMapZPEu2il_zOQt4Rx3H2v0a4ArIo1YSf-E7BwcIHL2v"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex h-32 w-32 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur transition hover:border-[#d6b36a]/60"
@@ -315,7 +315,7 @@ export default function Page() {
 
       {/* GLOVO */}
       <a
-        href="https://glovoapp.com/sr/rs/belgrade/stores/campania-pizza-gourmet-beg"
+        href="https://glovoapp.com/sr/rs/belgrade/stores/pizza-una-trattoria-gourmet-beg?gad_source=1&gad_campaignid=22853753177&gclid=EAIaIQobChMIvvm7g92TkwMVY2eRBR3JxDltEAAYASAAEgKz2PD_BwE"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex h-32 w-32 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur transition hover:border-[#d6b36a]/60"
