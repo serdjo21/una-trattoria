@@ -6,6 +6,7 @@ import Head from "next/head";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
+import { LanguageProvider } from "@/context/LanguageContext";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
@@ -81,11 +82,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:title" content="Una Trattoria" />
       </Head>
       <body className="min-h-screen">
+        <LanguageProvider>
         <Navbar />
         {children}
         <Footer />
         <SpeedInsights/>
         <Analytics/>
+        </LanguageProvider>
       </body>
     </html>
   );
