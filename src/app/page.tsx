@@ -50,7 +50,7 @@ function Gallery() {
       <div className="mx-auto max-w-6xl px-5 py-24">
         <div className="flex items-end justify-between gap-6">
           <SectionTitle>
-            {t.home.galerija} <span className="text-[#d6b36a]">ambijenta</span>
+            {t.home.galerija}
           </SectionTitle>
 
           <span className="text-xs tracking-[0.35em] uppercase text-white/60">
