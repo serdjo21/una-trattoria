@@ -36,7 +36,7 @@ export const texts = {
       partneriDostave: "Partneri Dostave",
       narucite: "Naručite naše specijalitete ovde.",
 
-      galerija: "Galerija ambijenta",
+      galerija: "Galerija",
       atmosfera: "una atmosfera",
 
       footerOpis:
@@ -84,7 +84,7 @@ export const texts = {
       partneriDostave: "Delivery Partners",
       narucite: "Order our specialties here.",
 
-      galerija: "Atmosphere gallery",
+      galerija: "gallery",
       atmosfera: "una atmosphere",
 
       footerOpis:
