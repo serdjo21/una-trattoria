@@ -1,0 +1,43 @@
+{
+  "home": {
+    "hero": {
+      "subtitle": "Vračar • Beograd",
+      "description": "Una Trattoria donosi autentičnu italijansku kuhinju u Beograd.",
+      "menu": "Pogledaj meni",
+      "reserve": "Rezerviši",
+      "location": "Lokacija",
+      "phone": "Telefon",
+      "hours": "Radno vreme"
+    },
+
+    "about": {
+      "title": "O nama",
+      "text": "Una Trattoria nastala je iz ljubavi prema italijanskoj kuhinji i jednostavnim, dobro poznatim receptima. Pravimo napuljsku pizzu od dugo fermentisanog testa, pečenu na visokoj temperaturi, uz pažljivo birane sastojke."
+    },
+
+    "menu": {
+      "title": "O jelovniku",
+      "text": "Jelovnik Una Trattorie nudi raznovrstan izbor jela. U ponudi su napuljske pizze, paste i sendviči, uz kombinacije koje se lako biraju i pamte.",
+      "cta": "Pogledajte meni"
+    },
+
+    "delivery": {
+      "subtitle": "Dostava",
+      "title": "Partneri Dostave",
+      "description": "Naručite naše specijalitete ovde."
+    },
+
+    "gallery": {
+      "title": "Galerija ambijenta",
+      "subtitle": "una atmosfera"
+    },
+
+    "footer": {
+      "description": "Napoletana disciplina, sezonski sastojci i preciznost u svakom zalogaju.",
+      "contact": "Kontakt",
+      "hours": "Radno vrijeme",
+      "reserve": "Rezervacije",
+      "rights": "Sva prava zadržana."
+    }
+  }
+}

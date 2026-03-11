@@ -1,4 +1,8 @@
+"use client";
+
 import React from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import { texts } from "@/i18n";
 
 const INFO = {
   name: "Una Trattoria",
@@ -13,45 +17,57 @@ function Divider() {
 }
 
 export default function Footer() {
+  const { lang } = useLanguage();
+  const t = texts[lang];
+
   return (
     <footer className="bg-black/85">
       <div className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-10 md:grid-cols-3">
+          
           <div className="space-y-3">
             <div className="text-xs tracking-[0.35em] uppercase text-white/60">
               {INFO.tagline}
             </div>
-            <div className="font-[var(--font-serif)] text-3xl">{INFO.name}</div>
+
+            <div className="font-[var(--font-serif)] text-3xl">
+              {INFO.name}
+            </div>
+
             <p className="text-white/60 text-sm leading-relaxed">
-              Ukus Italije u srcu Beograda.
+              {t.footer.opis}
             </p>
           </div>
 
           <div className="space-y-3">
             <div className="text-xs tracking-[0.35em] uppercase text-white/60">
-              Kontakt
+              {t.footer.kontakt}
             </div>
+
             <a
               className="block text-white/80 hover:text-white transition"
               href={`tel:${INFO.phone.replace(/\s+/g, "")}`}
             >
               {INFO.phone}
             </a>
+
             <div className="text-white/70">{INFO.address}</div>
           </div>
 
           <div className="space-y-3">
             <div className="text-xs tracking-[0.35em] uppercase text-white/60">
-              Radno vreme
+              {t.footer.radnoVrijeme}
             </div>
+
             <div className="text-white/70">{INFO.hours}</div>
-            
           </div>
+
         </div>
 
         <Divider />
+
         <div className="pt-8 text-xs text-white/40">
-          © {new Date().getFullYear()} {INFO.name}. Sva prava zadržana.
+          © {new Date().getFullYear()} {INFO.name}. {t.footer.prava}
         </div>
       </div>
     </footer>

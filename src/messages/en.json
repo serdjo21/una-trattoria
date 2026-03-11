@@ -1,0 +1,43 @@
+{
+  "home": {
+    "hero": {
+      "subtitle": "Vračar • Belgrade",
+      "description": "Una Trattoria brings authentic Italian cuisine to Belgrade.",
+      "menu": "View Menu",
+      "reserve": "Reserve",
+      "location": "Location",
+      "phone": "Phone",
+      "hours": "Working Hours"
+    },
+
+    "about": {
+      "title": "About Us",
+      "text": "Una Trattoria was created from a love for Italian cuisine and simple, well-known recipes. We make Neapolitan pizza from long-fermented dough, baked at high temperature with carefully selected ingredients."
+    },
+
+    "menu": {
+      "title": "About the Menu",
+      "text": "The Una Trattoria menu offers a diverse selection of dishes. It includes Neapolitan pizzas, pasta and sandwiches, with combinations that are easy to choose and remember.",
+      "cta": "View Menu"
+    },
+
+    "delivery": {
+      "subtitle": "Delivery",
+      "title": "Delivery Partners",
+      "description": "Order our specialties here."
+    },
+
+    "gallery": {
+      "title": "Atmosphere Gallery",
+      "subtitle": "una atmosphere"
+    },
+
+    "footer": {
+      "description": "Neapolitan discipline, seasonal ingredients and precision in every bite.",
+      "contact": "Contact",
+      "hours": "Working Hours",
+      "reserve": "Reservations",
+      "rights": "All rights reserved."
+    }
+  }
+}
