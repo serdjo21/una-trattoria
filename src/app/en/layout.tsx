@@ -1,7 +1,7 @@
 import "../globals.css";
 import { Inter, Playfair_Display } from "next/font/google";
 import type { Metadata } from "next";
-import NavbarEn from "./NavbarEn";
+import Navbar from "@/components/Navbar";
 import FooterEn from "./FooterEn";
 import Head from "next/head";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -58,7 +58,7 @@ export default function EnLayout({ children }: { children: React.ReactNode }) {
         <meta property="og:title" content="Una Trattoria" />
       </Head>
       <body className="min-h-screen">
-        <NavbarEn />
+        <Navbar />
         {children}
         <FooterEn />
         <SpeedInsights />
