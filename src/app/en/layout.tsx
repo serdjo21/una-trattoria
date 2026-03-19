@@ -1,15 +1,14 @@
-import "./globals.css";
+import "../globals.css";
 import { Inter, Playfair_Display } from "next/font/google";
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
+import NavbarEn from "./NavbarEn";
+import FooterEn from "./FooterEn";
 import Head from "next/head";
-import Footer from "@/components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/next"
-import { LanguageProvider } from "@/context/LanguageContext";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
-
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://unatrattoria.rs"),
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s — Una Trattoria",
   },
   description:
-    "Italijanske pice i specijaliteti u srcu Beograda. Originalna napoletana pizza, sveže paste i autentični ukusi Italije na Vračaru.",
+    "Italian pizzas and specialties in the heart of Belgrade. Authentic Neapolitan pizza, fresh pasta, and genuine flavors of Italy.",
 
   alternates: { canonical: "/" },
 
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Una Trattoria",
     title: "Pizza Una Trattoria",
     description:
-      "Italijanske pice i specijaliteti u srcu Beograda. Originalna napoletana pizza, sveže paste i autentični ukusi Italije na Vračaru.",
+      "Italian pizzas and specialties in the heart of Belgrade. Authentic Neapolitan pizza, fresh pasta, and genuine flavors of Italy.",
     images: [
       {
         url: new URL("/og.jpg", "https://unatrattoria.rs").toString(),
@@ -43,38 +42,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pizza Una Trattoria",
     description:
-      "Italijanske pice i specijaliteti u srcu Beograda. Originalna napoletana pizza, sveže paste i autentični ukusi Italije na Vračaru.",
+      "Italian pizzas and specialties in the heart of Belgrade. Authentic Neapolitan pizza, fresh pasta, and genuine flavors of Italy.",
     images: [new URL("/og.jpg", "https://unatrattoria.rs").toString()],
-  },
-
-  appleWebApp: {
-    capable: true,
-    title: "Una Trattoria",
-    statusBarStyle: "black-translucent",
-  },
-
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function EnLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-       <Head>
+      <Head>
         <title>Una Trattoria</title>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -82,13 +58,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:title" content="Una Trattoria" />
       </Head>
       <body className="min-h-screen">
-        <LanguageProvider>
-        <Navbar />
+        <NavbarEn />
         {children}
-        <Footer />
-        <SpeedInsights/>
-        <Analytics/>
-        </LanguageProvider>
+        <FooterEn />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

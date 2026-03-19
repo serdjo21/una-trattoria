@@ -11,10 +11,22 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLang] = useState<Lang>("sr");
+export const LanguageProvider = ({ 
+  children,
+  defaultLang
+}: { 
+  children: ReactNode;
+  defaultLang?: Lang;
+}) => {
 
-  const toggleLang = () => setLang(lang === "sr" ? "en" : "sr");
+  const parent = useContext(LanguageContext);
+
+  const [lang, setLang] = useState<Lang>(
+    defaultLang || parent?.lang || "sr"
+  );
+
+  const toggleLang = () =>
+    setLang(prev => prev === "sr" ? "en" : "sr");
 
   return (
     <LanguageContext.Provider value={{ lang, toggleLang }}>
@@ -25,6 +37,10 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
-  if (!context) throw new Error("useLanguage must be used within LanguageProvider");
+
+  if (!context){
+    throw new Error("useLanguage must be used within LanguageProvider");
+  }
+
   return context;
 };
