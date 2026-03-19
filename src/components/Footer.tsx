@@ -69,6 +69,14 @@ export default function Footer() {
         <div className="pt-8 text-xs text-white/40">
           © {new Date().getFullYear()} {INFO.name}. {t.footer.prava}
         </div>
+
+
+        <div className="pt-8 text-xs text-white/40">
+            <a href="/privacy-policy" target="blank" className="block text-white/80 hover:text-white transition">
+               Privacy Policy
+            </a>        
+        </div>
+
       </div>
     </footer>
   );
