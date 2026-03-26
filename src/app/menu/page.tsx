@@ -1,170 +1,172 @@
-import Image from "next/image";
-import type { Metadata } from "next";
-import Link from "next/link";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+"use client";
 
-import MenuGrid from "@/components/MenuGrid";
-import Footer from "@/components/Footer";
-import { antipasti, pizzas } from "@/lib/menu";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const INFO = {
-  name: "Una Trattoria",
-  tagline: "Napoletana • Beograd",
-  phone: "+381 63 336 444",
-  address: "Njegoševa 8, Vračar, Beograd",
-  hours: "08:00 – 23:00 pon-sub | ned 10:00 – 23:00",
-};
-
-export const metadata = {
-  title: "Meni",
-  description:
-    "Pizza Una Trattoria meni. pogledajte našu selekciju napoletana pica, svežih pasti i italijanskih specijaliteta.",
-  alternates: { canonical: "/menu" },
-  openGraph: { url: "https://unatrattoria.rs/menu" },
-};
-
-function SectionTitle({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="font-[var(--font-serif)] text-3xl sm:text-4xl tracking-tight">
-      {children}
-    </h2>
-  );
-}
-
-function Divider() {
-  return <div className="h-px w-full bg-white/10" />;
-}
-
-function GoldDivider({ tight }: { tight?: boolean }) {
-  return (
-    <div className={tight ? "mx-auto max-w-6xl px-5" : ""}>
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-[#d6b36a]/40 to-transparent" />
-    </div>
-  );
-}
+import { Section } from "@/components/MenuComponents";
 
 export default function MenuPage() {
-
-
   return (
-    <main className="bg-[rgb(var(--bg))] text-[rgb(var(--fg))]">
-     {/* HERO */}
-<section className="relative min-h-[70vh] overflow-hidden">
-  {/* BACKGROUND IMAGE */}
-  <div className="absolute inset-0">
-    <Image
-      src="/images/oven.jpg" 
-      alt="Una Trattoria — Meni"
-      fill
-      priority
-      className="object-cover"
-      sizes="100vw"
-    />
-  </div>
-
-  {/* OVERLAYS */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/85" />
-  <div className="absolute inset-0 [background:radial-gradient(60%_40%_at_50%_40%,rgba(210,170,95,0.20),transparent_60%)]" />
-  <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:64px_64px]" />
-
-  {/* CONTENT */}
-  <div className="relative z-10 mx-auto max-w-6xl px-5 pt-36 pb-20 text-center">
-    <div className="text-xs tracking-[0.45em] uppercase text-white/70">
-      Meni
-    </div>
-
-    <h1 className="mt-4 font-[var(--font-serif)] text-5xl sm:text-6xl md:text-7xl tracking-tight">
-      Una selekcija
-    </h1>
-
-    <p className="mx-auto mt-6 max-w-2xl text-white/70 leading-relaxed">
-      Zavirite u Naš meni
-    </p>
-
-    {/* INFO STRIP */}
-    <div className="mt-14 mx-auto max-w-3xl">
-      <div className="h-px w-full bg-white/10" />
-      <div className="mt-4 grid gap-3 sm:grid-cols-3 text-left text-xs text-white/65">
-        <div>
-          <div className="uppercase tracking-[0.25em] text-white/50">
-            Lokacija
-          </div>
-          <div className="mt-1">Njegoševa 8, Vračar</div>
+    <div className="min-h-screen bg-background text-foreground font-body">
+      <div className="max-w-[750px] mx-auto px-6 py-10">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h1 className="font-display text-menu-gold text-[48px] font-black uppercase leading-none tracking-wider">
+            UNA<br />TRATTORIA
+          </h1>
+          <p className="text-menu-gray text-[9px] mt-2 uppercase tracking-[0.3em]">PIZZA, LINI, TRATTORIA, PASTA</p>
         </div>
-        <div>
-          <div className="uppercase tracking-[0.25em] text-white/50">
-            Telefon
-          </div>
-          <div className="mt-1">+381 69 2134 843</div>
-        </div>
-        <div>
-          <div className="uppercase tracking-[0.25em] text-white/50">
-            Radno vreme
-          </div>
-          <div className="mt-1">08:00 – 23:00 pon-sub | ned 10:00 – 23:00
-</div>
-        </div>
+
+        {/* PASTA */}
+        <Section label="PASTA" sub={["SPAGHETTI", "TAGLIATELLE", "PENNE"]} items={[
+          { name: "Con Pomodorini", price: 790, description: "tomato sauce, basil, grana padano" },
+          { name: "Putanesca", price: 990, badges: ["new"], description: "tomatoes, olives, capers, anchovies" },
+          { name: "Chicken Curry", price: 1190, badges: ["new"], description: "chicken, curry sauce, sour cream" },
+          { name: "Bolognese", price: 990, description: "beef ragout in tomato sauce, grana padano" },
+          { name: "Carbonara", price: 990, description: "bacon, eggs, grana padano" },
+          { name: "Zucchini & Salmon", price: 1490, badges: ["new"], description: "smoked salmon, zucchini, light cream, grana padano" },
+          { name: "Chef's", price: 1490, badges: ["new"], description: "pesto genovese, ricotta, mascarpone, cherry tomato, grana padano, basil" },
+          { name: "Gamberi", price: 1390, badges: ["new"], description: "cherry tomatoes, white wine sauce, gamberi, grana padano" },
+        ]} />
+
+        {/* BAKED PASTA */}
+        <Section label="Baked Pasta" sub={["PACCHERI", "LINGVINI"]} items={[
+          { name: '"Kulen"', price: 1490, badges: ["domestic"], description: "Serbian spicy sausage, pepper, sour cream, light cream, grana padano" },
+          { name: "Cheesy Cotto", price: 1490, description: "prosciutto cotto, mushrooms, mozzarella cheese, ricotta cheese, grana padano" },
+          { name: "Cheesy Crudo", price: 1590, description: "prosciutto crudo, cherry tomatoes, smoked cheese, grana padano" },
+          { name: "Spicy 'Nduja", price: 1690, description: "beef ragout with Calabrian sausage, grana padano" },
+        ]} />
+
+        {/* GNOCCHI */}
+        <Section label="Gnocchi" items={[
+          { name: "Sorentina", price: 1190, description: "tomato sauce, mozzarella, grana padano, basil, oregano" },
+          { name: "Tartufata", price: 1490, description: "truffle cream, grana padano" },
+          { name: "Quattro Formaggi", price: 1490, description: "mozzarella, blue cheese, ricotta, grana padano" },
+        ]} />
+
+        {/* CHEF'S SPECIALTIES */}
+        <Section label="Chef's Specialties" items={[
+          { name: "Lasagne", price: 1490, description: "beef ragout, bechamel sauce, grana padano, mozzarella, tomato sauce" },
+          { name: "Chicken Burger / Spicy Chicken Burger", price: 790, badges: ["new"], description: "fried chicken fillet, chefs sauce, mixed green salad, tomatoes" },
+          { name: "Chicken Marsala", price: 1290, badges: ["new"], description: "chicken fillet, Marsala wine, mushrooms, grana padano, butter, rice" },
+        ]} />
+
+        {/* DOMESTIC SELECTION */}
+        <Section label="Domestic Selection" sub={["SIGNATURE PIZZAS"]} items={[
+          { name: "Pečenica", price: 1390, badges: ["domestic", "new"], description: '"ajvar" – Serbian roasted red pepper spread, mozzarella, Serbian smoked pork ham, sour cream with garlic, oregano' },
+          { name: "Kulen", price: 1390, badges: ["domestic", "new"], description: '"ajvar" – Serbian roasted red pepper spread, mozzarella, Serbian spicy sausage, cherry tomatoes' },
+          { name: '"Slanınica"', price: 1390, badges: ["domestic", "new"], description: "Serbian bacon, sour cream, mozzarella, smoked cheese, red onion, celery" },
+        ]} />
+
+        {/* PIZZA CLASSICS */}
+        <Section label="Pizza Classics" items={[
+          { name: "Marinara", price: 790, description: "tomato sauce, basil, garlic, pepper, olive oil" },
+          { name: "Margherita", price: 890, description: "tomato sauce, mozzarella, basil, grana padano, olive oil" },
+          { name: "Vesuvio", price: 1190, description: "tomato sauce, mozzarella, prosciutto cotto, olive oil" },
+          { name: "Capricciosa", price: 1390, description: "tomato sauce, mozzarella, prosciutto cotto, mushrooms, artichokes, olives, oregano" },
+          { name: "Diavola", price: 1390, badges: ["domestic"], description: "tomato sauce, mozzarella, Serbian spicy sausage, fresh paprika, peperoncino" },
+          { name: "Quattro Formaggi", price: 1390, description: "ricotta, mozzarella, gorgonzola, grana padano, smoked cheese, pepper" },
+          { name: "Quattro Stagione", price: 1390, description: 'tomato sauce, mozzarella, ham, "kulen" Serbian spicy sausage, artichoke, olives, mushrooms' },
+        ]} />
+
+        {/* PIZZA SPECIALS */}
+        <Section label="Pizza Specials" items={[
+          { name: "Bella Bianca", price: 1390, badges: ["new"], description: "ricotta, mozzarella, zucchini, grana padano, smoked cheese, rosemary, olive oil" },
+          { name: "Prosciutto", price: 1690, description: "tomato sauce, mozzarella fior di latte, arugula, cherry tomatoes, grana padano, olive oil" },
+          { name: "Burratina", price: 1990, description: "tomato sauce, mozzarella fior di latte, beef ham, arugula, cherry tomatoes, burrata, balsamic sauce, olive oil" },
+          { name: "Calabrese", price: 1690, description: "tomato sauce, mozzarella fior di latte, n'duja spicy calabrian sausage, onion, olive oil, basil" },
+          { name: "Primavera", price: 1490, description: "white cream, pesto genovese, zucchini, cherry tomatoes, basil, ricotta, olive oil" },
+          { name: "Verde", price: 1490, badges: ["new"], description: "ricotta, mozzarella fior di latte, baby spinach, cherry tomatoes, olive oil" },
+          { name: "Veggie Vegan", price: 1290, badges: ["new"], description: "tomato sauce, eggplant, zucchini, caper, red onion, paprika, mushrooms, olive oil, pepper, basil" },
+          { name: "Veggie Vegan + Mozzarella Fior di Latte", price: 1490, badges: ["new"] },
+          { name: "Chef's Pizza", price: 1590, badges: ["new"], description: "tomato sauce, mozzarella fior di latte, bacon, onion, grana padano, egg, pepper" },
+          { name: "Chorizo", price: 1890, badges: ["new"], description: "tomato sauce, goat cheese, chorizo, green olives, peperoncino" },
+        ]} />
+
+        {/* UNA PREMIUM */}
+        <Section label="Una Premium Pizza Selection" items={[
+          { name: "Una Speck e Zucchini", price: 2490, badges: ["new"], description: "white cream, mozzarella fior di latte, speck prosciutto, zucchini, rosemary, burrata, pepper, basil, olive oil" },
+          { name: "Una Tartufo", price: 1890, badges: ["new"], description: "truffle cream, mozzarella fior di latte, beef ham, cherry tomatoes, arugula, grana padano, aceto balsamico" },
+          { name: "Una Melagrana", price: 2390, badges: ["signature", "new"], description: "white cream, turkey ham, mascarpone, pomegranate, pine nuts, baby mozzarella, aceto balsamico di melagrana, crema melagrana" },
+          { name: "Una Dolce: di Fichi / Cherry / Quince / Grape", price: 1990, description: "mozzarella fior di latte, gorgonzola, beef ham, white cream, figs / cherry / quince / grapes spread" },
+          { name: "Una Dolce Prosciutto", price: 2390, badges: ["new"], description: "white cream, mozzarella fior di latte, gorgonzola, prosciutto, mascarpone, honey, almond" },
+          { name: "Una Mortadella", price: 1890, badges: ["new"], description: "white cream, mozzarella fior di latte, mortadella, pistachio cream, pistachio" },
+        ]} />
+
+        {/* BREAKFAST */}
+        <Section label="Breakfast" items={[
+          { name: "Calzone Prosciutto Cotto", price: 990, description: "tomato sauce, mozzarella, mushrooms, prosciutto cotto" },
+          { name: 'Calzone "Pečenica"', price: 990, description: 'tomato sauce, mozzarella, mushrooms, "pečenica" – Serbian smoked pork' },
+          { name: '"Rochus"', price: 790, description: "croissant, 2 scrambled eggs with mozzarella and ham" },
+          { name: "Eggs & Vegetables Base", price: 490, badges: ["new"], description: "3 eggs, mushrooms, tomato, paprika (add-ons available, check availability and prices)" },
+          { name: "Scrambled Eggs on Pizza Dough", price: 690, description: "3 scrambled eggs on pizza dough with mozzarella (add-ons available, check availability and prices)" },
+        ]} />
+
+        {/* PANUOZZO / SANDWICHES */}
+        <Section label="Panuozzo Napoletano Sandwiches" items={[
+          { name: '"Komšin"', price: 990, badges: ["new"], description: "ricotta, mozzarella, olive oil, eggs, mortadella, arugula, tomato" },
+          { name: '"Pietro"', price: 990, badges: ["new"], description: "mozzarella, olive oil, mushrooms, prosciutto cotto, tomato, eggs, mixed green salad" },
+          { name: "Caprese", price: 790, description: "mozzarella, tomato, basil, olive oil, arugula" },
+          { name: "Mortadella", price: 890, description: "pesto sauce, mozzarella, mortadella, arugula, tomato, grana padano" },
+          { name: "Tuna", price: 890, description: "tomatoes, mixed green salad, canned tuna, red onion, sweet corn" },
+          { name: "Cotto", price: 890, description: "prosciutto cotto, pesto genovese, tomatoes, grana padano, mozzarella" },
+          { name: "Prosciutto", price: 990, description: "prosciutto crudo, ricotta, cherry tomatoes, arugula, grana padano" },
+        ]} />
+
+        {/* STARTERS */}
+        <Section label="Starters" items={[
+          { name: "Pizza Triangles", price: 590, badges: ["new"], description: 'focaccia triangles with tomato sauce, sour cream and "ajvar" – Serbian roasted red pepper spread' },
+          { name: "Wedges Grana Padano", price: 690 },
+          { name: "Garlic Sticks", price: 290, badges: ["new"], description: "focaccia sticks with garlic and olive oil" },
+          { name: 'Grilled "Miročki" Cheese', price: 990, badges: ["new"], description: "grilled traditional Serbian cow's milk cheese originating from the Miroč mountain" },
+          { name: "Fried Mozzarella Cheese", price: 890, badges: ["new"] },
+          { name: "Fried Scamorza Cheese", price: 990 },
+          {
+            name: "Fried Montanarine – Neapolitan Street Food", price: "",
+            sub: [
+              { name: "prosciutto & ajvar – Serbian roasted red pepper spread", price: 1490, badges: ["new"] },
+              { name: "burrata & smoked salmon", price: 1490, badges: ["new"] },
+              { name: "mortadella & ricotta", price: 1490 },
+              { name: "classic – tomato sauce, grana padano, basil", price: 1290 },
+            ],
+          },
+          { name: "Parmigiana di Melanzane", price: 1190, description: "eggplant, mozzarella cheese, tomato sauce, grana padano" },
+          { name: "Burrata Cheese", price: 1390, description: "burrata cheese served with mixed green salad and cherry tomatoes" },
+          { name: "The Duo's Degustation", price: 1990, description: "(cheese & charcuterie, chef's selection)" },
+        ]} />
+
+        {/* SOUP / POTAGE */}
+        <Section label="Soup Potage" items={[
+          { name: "Creamy Tomato Soup with Mozzarella", price: 490, badges: ["new"] },
+          { name: "Minestrone with Parmigiano Cheese on the Side", price: 490 },
+          { name: "Seasonal Soup / Potage (check availability)", price: 490 },
+        ]} />
+
+        {/* SALADS */}
+        <Section label="Salads" items={[
+          { name: "Caprese", price: 1090, description: "tomatoes, mozzarella, fresh basil, aceto balsamico" },
+          { name: "Chicken", price: 890, badges: ["new"], description: "chicken fillet, mixed green salad, chef's sauce, croutons" },
+          { name: "Una", price: 1290, badges: ["signature", "new"], description: "mixed green salad, pomegranate, green apple, walnuts, raisins, olive oil, cherry tomatoes, goat cheese" },
+          { name: "Tuna", price: 990, description: "mixed green salad, red onion, sweet corn and canned tuna" },
+          { name: "Mixed Green Salad", price: 390 },
+          { name: "Una Arugula", price: 690, description: "arugula, cherry tomatoes, grana padano, olive oil, aceto balsamico" },
+          { name: "Tomato", price: 390, description: "tomato, red onion, olive oil" },
+        ]} />
+
+        {/* RISOTTO */}
+        <Section label="Risotto" items={[
+          { name: "Vegetables", price: 890, description: "zucchini, pepper, mushrooms, red onion, carrots, grana padano, butter" },
+          { name: "Funghi Chicken", price: 1190, badges: ["new"], description: "chicken fillet, wild mushrooms mix, grana padano, butter" },
+          { name: "Chicken Pinoli", price: 1490, badges: ["new"], description: "chicken fillet, pine nuts, grana padano, butter" },
+          { name: "Gamberi", price: 1390, badges: ["new"], description: "gamberi, grana padano, butter" },
+        ]} />
+
+        {/* DESSERTS */}
+        <Section label="Desserts" items={[
+          { name: "Tiramisu", price: 650 },
+          { name: "Raw Cake with Raspberry", price: 650, badges: ["new"] },
+          { name: "Banoffee", price: 790, badges: ["new"], description: "creamy banana cake with Serbian and oreo biscuit" },
+          { name: "Pizza with Nutella Spread", price: 990 },
+          { name: "Sharing is Caring", price: 1290, description: "deep fried pizza dough sticks with nutella and 100% pistachio cream" },
+        ]} />
       </div>
     </div>
-  </div>
-</section>
-
-      <section className="relative border-y border-white/10 bg-black/80">
-        <div className="pointer-events-none absolute top-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d6b36a]/50 to-transparent" />
-        <div className="mx-auto max-w-6xl px-5 py-24">
-          <MenuGrid title="SEKCIJA" items={antipasti} />
-        </div>
-        <div className="pointer-events-none absolute bottom-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d6b36a]/35 to-transparent" />
-      </section>
-
-      <div className="mx-auto max-w-6xl px-5 py-14">
-        <GoldDivider tight />
-      </div>
-
-      {/* PIZZA */}
-      <section className="relative border-y border-white/10 bg-black/80">
-        <div className="pointer-events-none absolute top-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d6b36a]/50 to-transparent" />
-        <div className="mx-auto max-w-6xl px-5 py-24">
-          <MenuGrid title="Pizza" items={pizzas} />
-        </div>
-        <div className="pointer-events-none absolute bottom-0 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d6b36a]/35 to-transparent" />
-      </section>
-
-      {/* NOTE / CTA */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
-        <div
-        >
-          <div className="text-xs tracking-[0.35em] uppercase text-[#d6b36a]/80">
-            Napomena
-          </div>
-          <div className="mt-3 font-[var(--font-serif)] text-2xl">
-            Alergeni i izmjene po dogovoru.
-          </div>
-          <div className="mt-4 text-sm text-white/70 leading-relaxed">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit dolores accusamus iusto nulla quasi, debitis corporis at perspiciatis. Quaerat temporibus culpa modi asperiores beatae odit corrupti nostrum eius. Neque, commodi!
-          </div> 
-
-          <div className="mt-8 flex flex-col sm:flex-row gap-3">
-            <a
-              href={`tel:${INFO.phone.replace(/\s+/g, "")}`}
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-xs tracking-[0.25em] uppercase hover:bg-white/15 transition"
-            >
-              Pozovi
-            </a>
-
-            <Link
-              href="/"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-black/30 px-6 py-3 text-xs tracking-[0.25em] uppercase text-white/80 hover:bg-black/20 hover:text-white transition"
-            >
-              Nazad na početnu
-            </Link>
-          </div>
-        </div>
-      </section>
-
-    </main>
   );
 }

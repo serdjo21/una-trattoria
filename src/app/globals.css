@@ -1,11 +1,33 @@
 @import "tailwindcss";
 
-
 :root{
   --bg: 10 10 12;
   --fg: 245 245 248;
   --muted: 160 160 170;
   --gold: 210 170 95;
+  --background: 0 0% 8%;
+    --foreground: 40 20% 90%;
+    --card: 0 0% 10%;
+    --card-foreground: 40 20% 90%;
+    --primary: 40 50% 55%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 40 20% 90%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 0 70% 50%;
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 40 50% 55%;
+    --radius: 0.25rem;
+    --menu-gold: 40 50% 55%;
+    --menu-cream: 40 20% 90%;
+    --menu-gray: 0 0% 60%;
+    --menu-dark: 0 0% 8%;
+    --menu-badge-new: 0 70% 45%;
+    --menu-badge-domestic: 30 60% 35%;
+    --menu-badge-signature: 40 50% 40%;
 }
 
 html, body { height: 100%; }
@@ -14,6 +36,7 @@ body{
   color: rgb(var(--fg));
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
+  font-family: 'Lato', sans-serif;
 }
 
 /* elegant selection */
