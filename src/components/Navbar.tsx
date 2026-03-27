@@ -22,7 +22,7 @@ export default function Navbar() {
 
           <a
             className="hover:text-white transition"
-            href={"/menuv2.pdf"}
+            href={"/menu"}
             target="_blank"
             rel="noopener noreferrer"
           >
