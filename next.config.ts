@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
             value: 'unatrattoria.rs'
           }
         ],
-        destination: 'https://www.unatrattoria.rs/:1',
+        destination: 'https://unatrattoria.rs/:1',
         permanent: true, 
       },
     ]

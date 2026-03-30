@@ -4,8 +4,10 @@ import { Section } from "@/components/MenuComponents";
 
 export default function MenuPage() {
   return (
+
     <div className="min-h-screen bg-background text-foreground font-body">
       <div className="max-w-[750px] mx-auto px-6 py-10">
+        <br /><br />
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="font-display text-menu-gold text-[48px] font-black uppercase leading-none tracking-wider">

@@ -249,7 +249,7 @@ export default function ContactPage() {
               <div className="relative aspect-[16/9] md:aspect-[21/9]">
                 <iframe
                   title={`${INFO.name} mapa`}
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90557.01035775535!2d20.329724765095417!3d44.823467923624484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7b007119831d%3A0x3094d505f13051d8!2sPizza%20Una%20Trattoria%20Gourmet!5e0!3m2!1sen!2srs!4v1766493314400!5m2!1sen!2srs"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.8115001312426!2d20.463911975766234!3d44.80503007107082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7b007119831d%3A0x3094d505f13051d8!2sPizza%20Una%20Trattoria%20Gourmet!5e0!3m2!1sen!2srs!4v1774888154594!5m2!1sen!2srs"
                   className="absolute inset-0 h-full w-full"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"

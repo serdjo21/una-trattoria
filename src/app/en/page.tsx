@@ -9,7 +9,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { texts } from "@/i18n";
  
 gsap.registerPlugin(ScrollTrigger);
- 
+                
 const INFO = {
   name: "Una Trattoria",
   tagline: "Vračar • Belgrade",

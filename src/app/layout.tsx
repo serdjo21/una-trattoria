@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>Una Trattoria</title>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-        <meta property="og:image" content="/og.jpg" />
+        <meta property="og:image" content="/public/ogv2.jpg" />
         <meta property="og:title" content="Una Trattoria" />
       </Head>
       <body className="min-h-screen">
