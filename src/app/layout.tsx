@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       "Italijanske pice i specijaliteti u srcu Beograda. Originalna napoletana pizza, sveže paste i autentični ukusi Italije na Vračaru.",
     images: [
       {
-        url: new URL("/og.jpg", "https://unatrattoria.rs").toString(),
+        url: new URL("/ogv2.jpg", "https://unatrattoria.rs").toString(),
         width: 1200,
         height: 630,
         alt: "Una Trattoria",
