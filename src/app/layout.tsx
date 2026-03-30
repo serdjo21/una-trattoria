@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Pizza Una Trattoria",
     description:
       "Italijanske pice i specijaliteti u srcu Beograda. Originalna napoletana pizza, sveže paste i autentični ukusi Italije na Vračaru.",
-    images: [new URL("/og.jpg", "https://unatrattoria.rs").toString()],
+    images: [new URL("/ogv2.jpg", "https://unatrattoria.rs").toString()],
   },
 
   appleWebApp: {
