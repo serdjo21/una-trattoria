@@ -9,7 +9,7 @@ const INFO = {
   tagline: "Vračar • Beograd",
   phone: "+381 63 336 444",
   address: "Njegoševa 8, Vračar, Beograd",
-  hours: "08:00 – 23:00 pon-sub | 10:00 – 23:00 ned",
+  hours: "09:00 – 23:45 pon-ned",
 };
 
 function Divider() {
