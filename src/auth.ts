@@ -4,8 +4,14 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 
 import { verifyAdminCredentials } from '@/lib/admin-auth';
 
+const authSecret = process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET;
+
+if (!authSecret) {
+  throw new Error('Missing AUTH_SECRET or NEXTAUTH_SECRET environment variable.');
+}
+
 export const authOptions: NextAuthOptions = {
-  secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'una-trattoria-admin-secret-2026',
+  secret: authSecret,
   session: {
     strategy: 'jwt',
   },

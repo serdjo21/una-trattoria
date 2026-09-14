@@ -1,6 +1,10 @@
-export const ADMIN_USERNAME = 'milos';
-export const ADMIN_PASSWORD = '#Marlboro2022';
-
 export function verifyAdminCredentials(username: string, password: string) {
-  return username.trim() === ADMIN_USERNAME && password === ADMIN_PASSWORD;
+  const configuredUsername = process.env.ADMIN_USERNAME?.trim() ?? '';
+  const configuredPassword = process.env.ADMIN_PASSWORD ?? '';
+
+  if (!configuredUsername || !configuredPassword) {
+    return false;
+  }
+
+  return username.trim() === configuredUsername && password === configuredPassword;
 }
