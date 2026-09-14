@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { AppProviders } from "@/components/AppProviders";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
-import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
 
@@ -98,13 +98,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        <LanguageProvider>
+        <AppProviders>
           <Navbar />
           {children}
           <Footer />
           <SpeedInsights />
           <Analytics />
-        </LanguageProvider>
+        </AppProviders>
       </body>
     </html>
   );

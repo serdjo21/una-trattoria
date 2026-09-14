@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 :root{
@@ -21,13 +22,14 @@
     --input: 0 0% 20%;
     --ring: 40 50% 55%;
     --radius: 0.25rem;
-    --menu-gold: 40 50% 55%;
-    --menu-cream: 40 20% 90%;
-    --menu-gray: 0 0% 60%;
-    --menu-dark: 0 0% 8%;
-    --menu-badge-new: 0 70% 45%;
-    --menu-badge-domestic: 30 60% 35%;
-    --menu-badge-signature: 40 50% 40%;
+    /* PDF-inspired palette */
+    --menu-gold: 210 170 95; /* warm gold */
+    --menu-cream: 245 240 230; /* paper cream */
+    --menu-gray: 150 150 150; /* muted body text */
+    --menu-dark: 10 10 12; /* background dark */
+    --menu-badge-new: 80 180 110;
+    --menu-badge-domestic: 200 140 80;
+    --menu-badge-signature: 170 120 60;
 }
 
 html, body { height: 100%; }
@@ -36,8 +38,115 @@ body{
   color: rgb(var(--fg));
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+
+/* utility classes for legacy components */
+.font-display{ font-family: 'Playfair Display', serif; }
+.font-body{ font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+
+/* menu-specific helpers */
+.menu-heading { letter-spacing: .06em; }
+.menu-item-name { letter-spacing: .02em; }
+.menu-price { font-variant-numeric: tabular-nums; }
+
+/* container that mimics the paper cutout from PDF */
+.menu-container{
+  background-color: rgb(var(--menu-dark));
+  padding: 36px 28px;
+  border-radius: 4px;
+}
+
+/* Precise typographic tuning to match the PDF */
+.menu-title{
+  font-size: 56px;
+  line-height: 0.95;
+  font-weight: 800;
+  color: rgb(var(--menu-gold));
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+.menu-subtitle{
+  font-size: 10px;
+  margin-top: 6px;
+  letter-spacing: .32em;
+  color: rgb(var(--menu-gray));
+}
+.menu-section-title{
+  font-size: 26px;
+  letter-spacing: .06em;
+  color: rgb(var(--menu-gold));
+  font-weight: 800;
+}
+.menu-item-name{ /* override smaller differences */
+  font-size: 15px;
+  font-weight: 700;
+}
+.menu-price{ /* ensure price emphasis */
+  font-size: 16px;
+  font-weight: 700;
+}
+.menu-subtle{ color: rgba(255,255,255,0.65); }
+
+/* spacing helpers */
+.section-gap{ margin-bottom: 28px; }
+
+/* Improved vertical rhythm for menu items */
+.menu-item{
+  padding: 8px 0;
+}
+.menu-item + .menu-item{ /* extra gap between items */
+  margin-top: 6px;
+}
+.menu-sub-item{ color: rgba(255,255,255,0.75); font-size: 12px; }
+
+/* badge refinements */
+.bg-menu-badge-new, .bg-menu-badge-domestic, .bg-menu-badge-signature{
+  padding-left: .45rem; padding-right: .45rem; border-radius: .25rem; font-size: 9px;
+}
+
+/* subtle shadow at container edge like printed card */
+.menu-container{ box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
+
+/* Allergen legend badges */
+.allergen-legend{ display:flex; gap:12px; align-items:center; margin-top:10px; }
+.allergen-badge{ display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:rgba(255,255,255,0.06); color:rgb(var(--menu-cream)); font-weight:700; font-size:11px; }
+.allergen-label{ font-size:11px; color:rgb(var(--menu-gray)); margin-left:6px; }
+
+/* Badge background utilities (fallback for Tailwind) */
+.bg-menu-badge-new{ background-color: rgb(var(--menu-badge-new)); color: #000; }
+.bg-menu-badge-domestic{ background-color: rgb(var(--menu-badge-domestic)); color: #000; }
+.bg-menu-badge-signature{ background-color: rgb(var(--menu-badge-signature)); color: #000; }
+/* generic badge for arbitrary labels */
+.bg-menu-badge-generic{ background-color: rgba(255,255,255,0.08); color: rgb(var(--menu-cream)); }
+
+/* subtle separator to mimic printed lines */
+.menu-separator{ height:1px; background: rgba(255,255,255,0.04); margin: 18px 0; }
+
+@media print{
+  body { background: #fff; color: #000; }
+  .menu-container{ background: #fff; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .menu-title { font-size: 36px; letter-spacing: .08em; }
+  .menu-subtitle { font-size: 9px; }
+  .menu-container { padding: 20px; }
+  .menu-section-title { font-size: 20px; }
+  .menu-item-name { font-size: 14px; }
+  .menu-price { font-size: 14px; }
+}
+
+/* Print improvements: remove shadows and use high contrast */
+@media print {
+  .menu-container { box-shadow: none; background: white; color: black; }
+  .bg-menu-badge-new, .bg-menu-badge-domestic, .bg-menu-badge-signature { background: #ddd; color: #000; }
+  .allergen-badge { background: #eee; color: #000; }
+}
+
+/* Screen-reader helper */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 /* elegant selection */
 ::selection { background: rgba(210,170,95,.25); }

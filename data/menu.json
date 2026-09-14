@@ -1,0 +1,597 @@
+[
+  {
+    "name": "PIZZA TRIANGLES",
+    "price": 590,
+    "description": "focaccia triangles with tomato sauce, sour cream and “ajvar” – Serbian roasted red pepper spread",
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "WEDGES GRANA PADANO",
+    "price": 690,
+    "description": null,
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "GARLIC STICKS",
+    "price": 290,
+    "description": "focaccia sticks with garlic and olive oil",
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "GRILLED “MIROČKI” CHEESE",
+    "price": 990,
+    "description": "grilled traditional Serbian cow’s milk cheese, originating from the miroč mountain",
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "FRIED MOZZARELLA CHEESE",
+    "price": 890,
+    "description": null,
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "FRIED SCAMORZA CHEESE",
+    "price": 990,
+    "description": null,
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "FRIED MONTANARINE – NEAPOLITAN STREET FOOD",
+    "price": 1490,
+    "description": "• prosciutto & ajvar – Serbian roasted red pepper spread • burrata & smoked salmon • mortadella & ricotta • classic – tomato sauce, grana padano, basil",
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "PARMIGIANA DI MELANZANE",
+    "price": 1190,
+    "description": "eggplant, mozzarella cheese, tomato sauce, grana padano",
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "BURRATA CHEESE",
+    "price": 1390,
+    "description": "burrata cheese served with mixed green salad and cherry tomatoes",
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "THE DUO’S DEGUSTATION",
+    "price": 1990,
+    "description": "(cheese & charcuterie, chef’s selection)",
+    "category": "starters",
+    "badges": []
+  },
+  {
+    "name": "CREAMY TOMATO SOUP WITH MOZZARELLA",
+    "price": 490,
+    "description": null,
+    "category": "soup pottage",
+    "badges": []
+  },
+  {
+    "name": "MINESTRONE WITH PARMIGIANO CHEESE ON THE SIDE",
+    "price": 490,
+    "description": null,
+    "category": "soup pottage",
+    "badges": []
+  },
+  {
+    "name": "SEASONAL SOUP/POTAGE (check availability)",
+    "price": 490,
+    "description": null,
+    "category": "soup pottage",
+    "badges": []
+  },
+  {
+    "name": "CAPRESE",
+    "price": 1090,
+    "description": "tomatoes, mozzarella, fresh basil, aceto balsamico",
+    "category": "salads",
+    "badges": []
+  },
+  {
+    "name": "CHICKEN",
+    "price": 890,
+    "description": "chicken fillet, mixed green salad, chef’s sauce, croutons",
+    "category": "salads",
+    "badges": []
+  },
+  {
+    "name": "UNA",
+    "price": 1290,
+    "description": "mixed green salad, pomegranate, green apple, walnuts, raisins, olive oil, cherry tomatoes, goat cheese",
+    "category": "salads",
+    "badges": []
+  },
+  {
+    "name": "TUNA",
+    "price": 990,
+    "description": "mixed green salad, red onion, sweet corn and canned tuna",
+    "category": "salads",
+    "badges": []
+  },
+  {
+    "name": "MIXED GREEN SALAD",
+    "price": 390,
+    "description": null,
+    "category": "salads",
+    "badges": []
+  },
+  {
+    "name": "UNA ARUGULA",
+    "price": 690,
+    "description": "arugula, cherry tomatoes, grana padano, olive oil, aceto balsamico",
+    "category": "salads",
+    "badges": []
+  },
+  {
+    "name": "TOMATO",
+    "price": 390,
+    "description": "tomato, red onion, olive oil",
+    "category": "salads",
+    "badges": []
+  },
+  {
+    "name": "VEGETABLE RISOTTO",
+    "price": 890,
+    "description": "zucchini, pepper, mushrooms, red onion, carrots, grana padano, butter",
+    "category": "risotto",
+    "badges": []
+  },
+  {
+    "name": "FUNGHI CHICKEN",
+    "price": 1190,
+    "description": "chicken fillet, wild mushrooms mix, grana padano, butter",
+    "category": "risotto",
+    "badges": []
+  },
+  {
+    "name": "CHICKEN PINOLI",
+    "price": 1490,
+    "description": "chicken fillet, pine nuts, grana padano, butter",
+    "category": "risotto",
+    "badges": []
+  },
+  {
+    "name": "GAMBERI",
+    "price": 1390,
+    "description": "gamberi, grana padano, butter",
+    "category": "risotto",
+    "badges": []
+  },
+  {
+    "name": "CON POMODORINI",
+    "price": 790,
+    "description": "tomato sauce, basil, grana padano",
+    "category": "pasta, spaghetti, tagliatelle, penne",
+    "badges": []
+  },
+  {
+    "name": "PUTANESCA",
+    "price": 990,
+    "description": "tomatoes, olives, capers, anchovies",
+    "category": "pasta, spaghetti, tagliatelle, penne",
+    "badges": []
+  },
+  {
+    "name": "CHICKEN CURRY",
+    "price": 1190,
+    "description": "chicken, curry sauce, sour cream",
+    "category": "pasta, spaghetti, tagliatelle, penne",
+    "badges": []
+  },
+  {
+    "name": "BOLOGNESE",
+    "price": 990,
+    "description": "beef ragout in tomato sauce, grana padano",
+    "category": "pasta, spaghetti, tagliatelle, penne",
+    "badges": []
+  },
+  {
+    "name": "CARBONARA",
+    "price": 990,
+    "description": "bacon, eggs, grana padano",
+    "category": "pasta, spaghetti, tagliatelle, penne",
+    "badges": []
+  },
+  {
+    "name": "ZUCCHINI & SALMON",
+    "price": 1490,
+    "description": "smoked salmon, zucchini, light cream, grana padano",
+    "category": "pasta, spaghetti, tagliatelle, penne",
+    "badges": []
+  },
+  {
+    "name": "CHEF’S",
+    "price": 1490,
+    "description": "pesto genovese, ricotta, mascarpone, cherry tomatoes, grana padano, basil",
+    "category": "pasta, spaghetti, tagliatelle, penne",
+    "badges": []
+  },
+  {
+    "name": "GAMBORI",
+    "price": 1390,
+    "description": "cherry tomatoes, white wine sauce, gambori, grana padano",
+    "category": "pasta, spaghetti, tagliatelle, penne",
+    "badges": []
+  },
+  {
+    "name": "“KULEN”",
+    "price": 1490,
+    "description": "Serbian spicy sausage, pepper, sour cream, light cream, grana padano",
+    "category": "baked pasta, paccheri, lingvini",
+    "badges": []
+  },
+  {
+    "name": "CHEESY COTTO",
+    "price": 1490,
+    "description": "prosciutto cotto, mushrooms, mozzarella cheese, ricotta cheese, grana padano",
+    "category": "baked pasta, paccheri, lingvini",
+    "badges": []
+  },
+  {
+    "name": "CHEESY CRUDO",
+    "price": 1590,
+    "description": "prosciutto crudo, cherry tomatoes, smoked cheese, grana padano",
+    "category": "baked pasta, paccheri, lingvini",
+    "badges": []
+  },
+  {
+    "name": "SPICY ‘NDUJA",
+    "price": 1690,
+    "description": "beef ragout with Calabrian sausage, grana padano",
+    "category": "baked pasta, paccheri, lingvini",
+    "badges": []
+  },
+  {
+    "name": "SORENTINA",
+    "price": 1190,
+    "description": "tomato sauce, mozzarella, grana padano, basil, oregano",
+    "category": "gnocchi",
+    "badges": []
+  },
+  {
+    "name": "TARTUFATA",
+    "price": 1490,
+    "description": "truffle cream, grana padano",
+    "category": "gnocchi",
+    "badges": []
+  },
+  {
+    "name": "QUATTRO FORMAGGI",
+    "price": 1490,
+    "description": "mozzarella, blue cheese, ricotta, grana padano",
+    "category": "gnocchi",
+    "badges": []
+  },
+  {
+    "name": "LASAGNE",
+    "price": 1490,
+    "description": "beef ragout, bechamel sauce, grana padano, mozzarella, tomato sauce",
+    "category": "chef's specialties",
+    "badges": []
+  },
+  {
+    "name": "CHICKEN BURGER / SPICY CHICKEN BURGER",
+    "price": 790,
+    "description": "fried chicken fillet, chef’s sauce, mixed green salad, tomatoes",
+    "category": "chef's specialties",
+    "badges": []
+  },
+  {
+    "name": "CHICKEN MARSALA",
+    "price": 1290,
+    "description": "chicken fillet, Marsala wine, mushrooms, grana padano, butter, rice",
+    "category": "chef's specialties",
+    "badges": []
+  },
+  {
+    "name": "CALZONE PROSCIUTTO COTTO",
+    "price": 990,
+    "description": "tomato sauce, mozzarella, mushrooms, prosciutto cotto",
+    "category": "breakfast",
+    "badges": []
+  },
+  {
+    "name": "CALZONE “PEČENICA”",
+    "price": 990,
+    "description": "tomato sauce, mozzarella, mushrooms, “pečenica” - Serbian smoked pork",
+    "category": "breakfast",
+    "badges": []
+  },
+  {
+    "name": "“ROCHUS”",
+    "price": 790,
+    "description": "croissant, 2 scrambled eggs with mozzarella and ham",
+    "category": "breakfast",
+    "badges": []
+  },
+  {
+    "name": "EGGS & VEGETABLES BASE",
+    "price": 490,
+    "description": "3 eggs, mushrooms, tomato, paprika (add-ons available, check availability and prices)",
+    "category": "breakfast",
+    "badges": []
+  },
+  {
+    "name": "SCRAMBLED EGGS ON PIZZA DOUGH",
+    "price": 690,
+    "description": "3 scrambled eggs on pizza dough with mozzarella (add-ons available, check availability and prices)",
+    "category": "breakfast",
+    "badges": []
+  },
+  {
+    "name": "“KOMŠIN”",
+    "price": 990,
+    "description": "ricotta, mozzarella, olive oil, eggs, mortadella, arugula, tomato",
+    "category": "panuozzo napoletano sandwiches",
+    "badges": []
+  },
+  {
+    "name": "“PIETRO”",
+    "price": 990,
+    "description": "mozzarella, olive oil, mushrooms, prosciutto cotto, tomato, eggs, mixed green salad",
+    "category": "panuozzo napoletano sandwiches",
+    "badges": []
+  },
+  {
+    "name": "CAPRESE",
+    "price": 790,
+    "description": "mozzarella, tomato, basil, olive oil, arugula",
+    "category": "panuozzo napoletano sandwiches",
+    "badges": []
+  },
+  {
+    "name": "MORTADELLA",
+    "price": 890,
+    "description": "pesto sauce, mozzarella, mortadella, arugula, tomato, grana padano",
+    "category": "panuozzo napoletano sandwiches",
+    "badges": []
+  },
+  {
+    "name": "TUNA",
+    "price": 890,
+    "description": "tomatoes, mixed green salad, canned tuna, red onion, sweet corn",
+    "category": "panuozzo napoletano sandwiches",
+    "badges": []
+  },
+  {
+    "name": "COTTO",
+    "price": 890,
+    "description": "prosciutto cotto, pesto genovese, tomatoes, grana padano, mozzarella",
+    "category": "panuozzo napoletano sandwiches",
+    "badges": []
+  },
+  {
+    "name": "PROSCIUTTO",
+    "price": 990,
+    "description": "prosciutto crudo, ricotta, cherry tomatoes, arugula, grana padano",
+    "category": "panuozzo napoletano sandwiches",
+    "badges": []
+  },
+  {
+    "name": "PEČENICA",
+    "price": 1390,
+    "description": "“ajvar” – Serbian paprika spread, mozzarella, Serbian smoked pork ham, sour cream with garlic, oregano",
+    "category": "domestic selection signature pizza's",
+    "badges": []
+  },
+  {
+    "name": "KULEN",
+    "price": 1390,
+    "description": "“ajvar” – Serbian paprika spread, mozzarella, Serbian spicy sausage, cherry tomatoes",
+    "category": "domestic selection signature pizza's",
+    "badges": []
+  },
+  {
+    "name": "“SLANINICA”",
+    "price": 1390,
+    "description": "Serbian bacon, sour cream, mozzarella, smoked cheese, red onion, celery",
+    "category": "domestic selection signature pizza's",
+    "badges": []
+  },
+  {
+    "name": "MARINARA",
+    "price": 790,
+    "description": "tomato sauce, basil, garlic, pepper, olive oil",
+    "category": "pizza classics",
+    "badges": []
+  },
+  {
+    "name": "MARGHERITA",
+    "price": 890,
+    "description": "tomato sauce, mozzarella, basil, grana padano, olive oil",
+    "category": "pizza classics",
+    "badges": []
+  },
+  {
+    "name": "VESUVIO",
+    "price": 1190,
+    "description": "tomato sauce, mozzarella, prosciutto cotto, olive oil",
+    "category": "pizza classics",
+    "badges": []
+  },
+  {
+    "name": "CAPRICCIOSA",
+    "price": 1390,
+    "description": "tomato sauce, mozzarella, prosciutto cotto, mushrooms, artichokes, olives, oregano",
+    "category": "pizza classics",
+    "badges": []
+  },
+  {
+    "name": "DIAVOLA",
+    "price": 1390,
+    "description": "tomato sauce, mozzarella, Serbian spicy sausage, fresh paprika, peperoncino",
+    "category": "pizza classics",
+    "badges": []
+  },
+  {
+    "name": "QUATTRO FORMAGGI",
+    "price": 1390,
+    "description": "ricotta, mozzarella, gorgonzola, grana padano, smoked cheese, pepper",
+    "category": "pizza classics",
+    "badges": []
+  },
+  {
+    "name": "QUATTRO STAGIONE",
+    "price": 1390,
+    "description": "tomato sauce, mozzarella, ham, “kulen” Serbian spicy sausage, artichoke, olives, mushrooms",
+    "category": "pizza classics",
+    "badges": []
+  },
+  {
+    "name": "BELLA BIANCA",
+    "price": 1390,
+    "description": "ricotta, mozzarella, zucchini, grana padano, smoked cheese, rosemary, olive oil",
+    "category": "pizza classics",
+    "badges": []
+  },
+  {
+    "name": "PROSCIUTTO",
+    "price": 1690,
+    "description": "tomato sauce, mozzarella fior di latte, arugula, cherry tomatoes, grana padano, olive oil",
+    "category": "pizza specials",
+    "badges": []
+  },
+  {
+    "name": "BURRATINA",
+    "price": 1990,
+    "description": "tomato sauce, mozzarella fior di latte, beef ham, arugula, cherry tomatoes, burrata, balsamic sauce, olive oil",
+    "category": "pizza specials",
+    "badges": []
+  },
+  {
+    "name": "CALABRESE",
+    "price": 1690,
+    "description": "tomato sauce, mozzarella fior di latte, n’duja spicy calabrian sausage, onion, olive oil, basil",
+    "category": "pizza specials",
+    "badges": []
+  },
+  {
+    "name": "PRIMAVERA",
+    "price": 1490,
+    "description": "white cream, pesto genovese, zucchini, cherry tomatoes, basil, ricotta, olive oil",
+    "category": "pizza specials",
+    "badges": []
+  },
+  {
+    "name": "VERDE",
+    "price": 1490,
+    "description": "ricotta, mozzarella fior di latte, baby spinach, cherry tomatoes, olive oil",
+    "category": "pizza specials",
+    "badges": []
+  },
+  {
+    "name": "VEGGIE VEGAN",
+    "price": 1290,
+    "description": "tomato sauce, eggplant, zucchini, caper, red onion, paprika, mushrooms, olive oil, pepper, basil",
+    "category": "pizza specials",
+    "badges": []
+  },
+  {
+    "name": "VEGGIE VEGAN + MOZZARELLA FIOR DI LATTE",
+    "price": 1490,
+    "description": null,
+    "category": "pizza specials",
+    "badges": []
+  },
+  {
+    "name": "CHEF’S PIZZA",
+    "price": 1590,
+    "description": "tomato sauce, mozzarella fior di latte, bacon, onion, grana padano, egg, pepper",
+    "category": "pizza specials",
+    "badges": []
+  },
+  {
+    "name": "CHORIZO",
+    "price": 1890,
+    "description": "tomato sauce, goat cheese, chorizo, green olives, peperoncino",
+    "category": "pizza specials",
+    "badges": []
+  },
+  {
+    "name": "UNA SPECK E ZUCCHINI",
+    "price": 2490,
+    "description": "white cream, mozzarella fior di latte, speck prosciutto, zucchini, rosemary, burrata, pepper, basil, olive oil",
+    "category": "una premium pizza selection",
+    "badges": []
+  },
+  {
+    "name": "UNA TARTUFO",
+    "price": 1890,
+    "description": "truffle cream, mozzarella fior di latte, beef ham, cherry tomatoes, arugula, grana padano, aceto balsamico",
+    "category": "una premium pizza selection",
+    "badges": []
+  },
+  {
+    "name": "UNA MELAGRANA",
+    "price": 2390,
+    "description": "white cream, turkey ham, mascarpone, pomegranate, pine nuts, baby mozzarella, aceto balsamico di melagrana, crema melagrana",
+    "category": "una premium pizza selection",
+    "badges": []
+  },
+  {
+    "name": "UNA DOLCE: FIGS / CHERRY / QUINCE / GRAPE",
+    "price": 1990,
+    "description": "mozzarella fior di latte, gorgonzola, beef ham, white cream, figs / cherry / quince / grapes spread",
+    "category": "una premium pizza selection",
+    "badges": []
+  },
+  {
+    "name": "UNA DOLCE PROSCIUTTO",
+    "price": 2390,
+    "description": "white cream, mozzarella fior di latte, gorgonzola, prosciutto, mascarpone, honey, almond",
+    "category": "una premium pizza selection",
+    "badges": []
+  },
+  {
+    "name": "UNA MORTADELLA",
+    "price": 1890,
+    "description": "white cream, mozzarella fior di latte, mortadella, pistachio cream, pistachio",
+    "category": "una premium pizza selection",
+    "badges": []
+  },
+  {
+    "name": "TIRAMISU",
+    "price": 650,
+    "description": null,
+    "category": "desserts",
+    "badges": []
+  },
+  {
+    "name": "RAW CAKE WITH RASPBERRY",
+    "price": 650,
+    "description": null,
+    "category": "desserts",
+    "badges": []
+  },
+  {
+    "name": "BANOFFEE",
+    "price": 790,
+    "description": "creamy banana cake with Serbian and oreo biscuit",
+    "category": "desserts",
+    "badges": []
+  },
+  {
+    "name": "PIZZA WITH NUTELLA SPREAD",
+    "price": 990,
+    "description": null,
+    "category": "desserts",
+    "badges": []
+  },
+  {
+    "name": "SHARING IS CARING",
+    "price": 1290,
+    "description": "deep fried pizza dough sticks with nutella and 100% pistachio cream",
+    "category": "desserts",
+    "badges": []
+  }
+]
